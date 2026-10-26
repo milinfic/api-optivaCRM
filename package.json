@@ -1,0 +1,33 @@
+{
+  "name": "optiva-crm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node database/seed.js",
+    "db:schema": "node database/apply-schema.js",
+    "test": "node --test tests/unit/*.test.js",
+    "db:create": "psql \"$DATABASE_URL\" -f database/create-tables.sql",
+    "db:seed:sql": "psql \"$DATABASE_URL\" -f database/seed.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Optiva CRM - backend (Express + Knex + Postgres)",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
